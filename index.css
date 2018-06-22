@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@media (min-width:240px) and (max-width:320px){html{font-size:12.8px!important}}
+@media (min-width:321px) and (max-width:360px){html{font-size:14.4px!important}}
+@media (min-width:361px) and (max-width:375px){html{font-size:15px!important}}
+@media (min-width:376px) and (max-width:384px){html{font-size:15.36px!important}}
+@media (min-width:385px) and (max-width:414px){html{font-size:16.56px!important}}
+@media (min-width:415px) and (max-width:450px){html{font-size:18px!important}}
+@media (min-width:451px) and (max-width:500px){html{font-size:20px!important}}
+@media (min-width:501px) and (max-width:550px){html{font-size:22px!important}}
+@media (min-width:551px) and (max-width:569px){html{font-size:22.72px!important}}
+@media (min-width:569px) and (max-width:640px){html{font-size:25.6px!important}}
+@media (min-width:641px) and (max-width:667px){html{font-size:26.68px!important}}
+@media (min-width:668px) and (max-width:736px){html{font-size:29.44px!important}}
+@media (min-width:738px) and (max-width:768px){html{font-size:30.72px!important}}
+@media (min-width:769px) and (max-width:900px){html{font-size:36px!important}}
+@media (min-width:901px) and (max-width:1080px){html{font-size:43.24px!important}}
+body,html{
+    width: 100%;
+    position: relative;
+}
+.cmr-swiperBox{
+    margin: 1.07rem auto;
+}
+.cmr-swiperBox .swiper-container{
+    padding-bottom: 2.67rem;
+}
+.swiper-container {
+    width: 11.93rem;
+    margin: 1.07rem auto;
+} 
+.swiper-wrapper .swiper-slide{
+    width: 11.93rem;
+    height: 15.6rem;
+    background: url("./img/书封底图@2x.png") no-repeat;
+    background-size: 100% 100%;
+}
+.swiper-wrapper .swiper-slide img{
+    width: 11.2rem;
+    height: 14.93rem;
+    border-bottom-right-radius:0.67rem;
+}
+.swiper-pagination-bullets .swiper-pagination-bullet{
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    opacity: 0.8;
+    background: #BDBDBD;
+    border-radius: 4px;
+}
+.swiper-pagination-bullets .swiper-pagination-bullet-active{
+    width: 1rem;
+    background: #D2AF83;
+}
+.cmr-shiyun{
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 1.33rem;
+    line-height: 1.33rem;
+    color: #352D2B;
+    letter-spacing: 0;
+    text-align: center;
+    margin-top: 1.47rem;
+    margin-bottom: 1.13rem;
+}
+.cmr-author{
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 0.93rem;
+    line-height: 0.93rem;
+    color: #AEABAA;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+.cmr-priceBox{
+    border-bottom: 1px solid #F3F3F3;
+}
+.cmr-bookClass{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    margin-bottom: 0.87rem;
+}
+.cmr-dzBook,.cmr-jzBook{
+    display: inline-block;
+    border: 1px solid rgba(174,171,170,0.50);
+    color: #AEABAA;
+    border-radius: 6px;
+    width: 3.93rem;
+    height: 1.47rem;
+    line-height: 1.47rem;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+}
+.cmr-bookClass .cmr-bookSp{
+    opacity: 0.6;
+    border: 1px solid #FF6600;
+    color: #FF6600;
+}
+.cmr-bookClass span:first-of-type{
+    margin-right: 1.33rem;
+}
+.cmr-price{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 1.73rem;
+    line-height: 1.73rem;
+    color: #D2AF83;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+.com-bookTxt{
+    padding: 1.27rem;
+    padding: 1.27rem 1.07rem 1.47rem;
+    border-bottom: 1px solid #F3F3F3;
+}
+.com-bookTitle{
+    font-family: SourceHanSansCN-Bold;
+    font-size: 1.07rem;
+    line-height: 1.07rem;
+    font-weight: bold;
+    color: #5D5755;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+}
+.com-bookDesc{
+    font-family: SourceHanSansCN-Normal;
+    font-size: 14px;
+    color: #5D5755;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 25px;
+    display: -webkit-box;    
+    -webkit-box-orient: vertical;   
+    overflow: hidden;
+    position: relative;
+}
+.line-clamp5{
+    -webkit-line-clamp: 5;
+}
+.cmr-mtDescBox{
+    border: none;
+    margin-bottom: 4.07rem;
+}
+.line-clamp3{
+    -webkit-line-clamp: 3; 
+}
+.cmr-zdBox{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-family: SourceHanSansCN-Normal;
+    font-size: 0.93rem;
+    color: #DBCCB9;
+    letter-spacing: 0;
+    background: #fff;
+    width: 2.85rem;
+    height: 1.67rem;
+    line-height: 2.13rem;
+}
+.icon-arrowDown{
+    width: 0.6rem;
+    height: 0.33rem;
+    margin-left: 0.27rem;
+    margin-bottom: 0.27rem;
+}
+.cmr-botBox{
+    width: 100%;
+    height: 3.2rem;
+    background: #fff;
+    line-height: 3.2rem;
+    box-shadow: 0 -1rem 1rem #f7f7f7;
+    display: flex;
+    display: -webkit-flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.cmr-carNumBox{
+    width: 1.67rem;
+    height: 100%;
+    padding: 0.73rem 1.93rem 0 2.13rem;
+    position: relative;
+}
+.cmr-carImg{
+    width: 1.67rem;
+    height: 1.67rem;
+}
+.cmr-carNum{
+    position: absolute;
+    right: 1.8rem;
+    top: 0.9rem;
+    font-family: SourceHanSansCN-Regular;
+    font-size: 0.67rem;
+    color: #FFFFFF;
+    letter-spacing: 0.13px;
+    width: 0.87rem;
+    height: 0.87rem;
+    line-height: 0.87rem;
+    text-align: center;
+    background: #FF6600;
+    border-radius: 100%;
+}
+.cmr-addCar{
+    width: 7.8rem;
+    background-image: linear-gradient(-90deg, #E3CAA7 1%, #BFAB8E 100%);
+    font-family: SourceHanSansCN-Bold;
+    font-size: 1.07rem;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+}
+.cmr-addBook{
+    flex: 1;
+    -webkit-flex: 1;
+    border-left: 1px solid #F3F3F3;
+    height: 100%;
+    line-height: 1.33rem;
+    margin-top: 0.93rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-left: 1rem;
+    font-family: SourceHanSansCN-Normal;
+    font-size: 0.93rem;
+    color: #352D2B;
+    letter-spacing: 0;
+}
+.cmr-carInfos{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 3.2rem;
+    background: #FFFFFF;
+    box-shadow: 0 0 999rem rgba(0,0,0,0.30);
+}
+.cmr-fcAddCar{
+    list-style: none;
+    width: 100%;
+    height: 7.6rem;
+    display: flex;
+}
+.cmr-fcImg{
+    width: 4.27rem;
+    height: 6rem;
+    margin: 1rem 0.9rem 0 1.07rem;
+}
+.cmr-fcImg img{
+    width: 100%;
+    height: 100%;
+}
+.cmr-fcTopBox{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+}
+.cmr-fcTopBox h3{
+    font-family: SourceHanSansCN-Normal;
+    font-size: 1.07rem;
+    color: #352D2B;
+    letter-spacing: 0;
+    margin-top: 2.07rem;
+    margin-bottom: 0.8rem;
+}
+.cmr-fcTopBox span{
+    display: inline-block;
+    width: 1.51rem;
+    height: 1.51rem;
+    line-height: 1.51rem;
+    text-align: center;
+    color: #D8D8D8;
+    margin-top: 0.75rem;
+    margin-right: 0.71rem;
+}
+.cmr-fcPrice{
+    font-family: SourceHanSansCN-Bold;
+    font-size: 1.47rem;
+    color: #FF6600;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: bold;
+}
+.cmr-fcPrice span{
+    font-size: 1.73rem;
+    margin-left: 0.43rem;
+}
+.cmr-fcMg{
+    flex: 1;
+}
+.cmr-fcAction{
+    display: flex;
+    justify-content: space-between;
+}
+.cmr-fcDelete{
+    opacity: 0.6;
+    border: 1px solid #352D2B;
+    border-radius: 6px;
+    width: 3.33rem;
+    height: 1.47rem;
+    text-align: center;
+    line-height: 1.47rem;
+    margin-right: 1.07rem;
+}
+.cmr-toast{
+    display: none;
+    font-family: SourceHanSansCN-Regular;
+    font-size: 1rem;
+    color: #FFFFFF;
+    letter-spacing: 0.2px;
+    background: rgba(0,0,0,0.75);
+    border-radius: 100px;
+    padding: 1.2rem 1.67rem 1.13rem 1.73rem;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+}
