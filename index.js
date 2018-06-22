@@ -52,6 +52,10 @@ $(document).ready(function(){
     })
     // 点击购物车
     $('.cmr-carNumBox').click(function() {
-        
+        var bookInfos = localStorage.getItem('bookInfos');
+        bookInfos.map(function(item) {
+            var html = "<li class='cmr-fcAddCar'><div class='cmr-fcImg'><img src='"+item.bookCover+"' /></div><div class='cmr-fcMg'><div class='cmr-fcTopBox'><h3>"+item.bookName+"</h3><i class='fa fa-close fa-lg cmr-close'></i></div><div class='r-fcAction'><div class='cmr-fcPrice'>¥<span>"+item.bookPrice+"</span></div><div class='cmr-fcDelete'>删除</div></div></div></li>";
+            
+        })
     })
 })
