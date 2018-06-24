@@ -1,5 +1,8 @@
 $(document).ready(function(){
-    var bookInfos = [];
+    var activeIndex = 0;
+    var bookInfos = JSON.parse(localStorage.getItem('bookInfos')) || [];
+    // 购物车数量
+    $('.cmr-carNum').text(bookInfos.length);
     var mySwiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
         loop: true,
@@ -44,18 +47,66 @@ $(document).ready(function(){
     })
     //  点击加入购物车
     $('.cmr-addCar').click(function() {
-        var num =  parseInt($('.cmr-carNum').text());
-        $('.cmr-carNum').text(num+1);
-        var activeIndex = mySwiper.activeIndex;
-        bookInfos.push({'bookCover':'./img/cover0'+activeIndex+'.png','bookName':'时运变迁','bookPrice': '456','bookId':activeIndex});
-        localStorage.setItem('bookInfos',bookInfos);
+        var mockData = {'bookCover':'http://cdn.cmread.com/coverFile/400630471/5527c1c8a393e08405538b49991eb905862f39252ee0/cover180240.jpg','bookName':'时运变迁'+activeIndex,'bookPrice': '456','bookId':activeIndex};
+        bookInfos.push(mockData);
+        localStorage.setItem('bookInfos',JSON.stringify(bookInfos));
+        // 更新购物车的数量
+        $('.cmr-carNum').text(bookInfos.length);
+        activeIndex++;
+        // 更新购物车列表
+        renderLi(mockData);
     })
     // 点击购物车
     $('.cmr-carNumBox').click(function() {
-        var bookInfos = localStorage.getItem('bookInfos');
-        bookInfos.map(function(item) {
-            var html = "<li class='cmr-fcAddCar'><div class='cmr-fcImg'><img src='"+item.bookCover+"' /></div><div class='cmr-fcMg'><div class='cmr-fcTopBox'><h3>"+item.bookName+"</h3><i class='fa fa-close fa-lg cmr-close'></i></div><div class='r-fcAction'><div class='cmr-fcPrice'>¥<span>"+item.bookPrice+"</span></div><div class='cmr-fcDelete'>删除</div></div></div></li>";
-            
-        })
+        // 清除ul中的子元素
+        $('.cmr-carInfos').html('');
+        var books = JSON.parse(localStorage.getItem('bookInfos'));
+        for(var i in books) {
+            if(books[i]) {
+                renderLi(books[i])
+            }
+        }
+        // 切换购物车列表的显示影藏
+        if(books && books.length>0) {
+            $('.cmr-carInfos').toggle();
+        }
+    })
+    // 点击删除
+    $('.cmr-carInfos').on('click','li',function(e) {
+        var item = $(this);
+        console.log($(this),1);
+        // 获取自定义属性
+        var bookId = $(this).data('bookid');
+        // 获取localstorage的值
+        var books = JSON.parse(localStorage.getItem('bookInfos'));
+        var matchIndex = 0;
+        // $('.cmr-carInfos').remove(item);
+        // 寻找匹配的元素
+        for(var i in books) {
+            if(books[i].bookId == bookId) {
+                matchIndex = i;
+                break;
+            }
+        }
+        // 删除匹配到的元素
+        books.splice(matchIndex,1);
+        $('.cmr-carInfos').html('');
+        if(books.length>0) {
+            for(var i in books) {
+                if(books[i]) {
+                    renderLi(books[i])
+                }
+            }
+        } else {
+            $('.cmr-carInfos').css('display','none');
+        }
+        // 更新购物车数量
+        $('.cmr-carNum').text(books.length);
+        // 更新localstorage的值
+        localStorage.setItem('bookInfos',JSON.stringify(books));
     })
 })
+function renderLi(item) {
+    var html = "<li class='cmr-fcAddCar' data-bookid='"+item.bookId+"'><div class='cmr-fcImg'><img src='"+item.bookCover+"' /></div><div class='cmr-fcMg'><div class='cmr-fcTopBox'><h3>"+item.bookName+"</h3><i class='fa fa-close fa-lg cmr-close'></i></div><div class='cmr-fcAction'><div class='cmr-fcPrice'>¥<span>"+item.bookPrice+"</span></div><div class='cmr-fcDelete'>删除</div></div></div></li>";
+    $('.cmr-carInfos').append(html);
+}

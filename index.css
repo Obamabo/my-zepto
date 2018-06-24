@@ -229,6 +229,7 @@ body,html{
     letter-spacing: 0;
 }
 .cmr-carInfos{
+    display: none;
     width: 100%;
     position: fixed;
     left: 0;
